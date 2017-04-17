@@ -91,34 +91,6 @@ function add(lista, elemento) {
 
 }
 
-/**
- * Añade un nuevo elemento en la posición especificada en la lista. Devuelve el 
- * tamaño de la lista una vez añadido. 
- * 
- * @param {type} lista
- * @param {type} elemento
- * @param {type} index
- * @returns {unresolved}
- */
-function addAt(lista, elemento, index) {
-    elemento = parseInt(elemento);
-    if (isNaN(elemento)) {
-        throw "El elemento no es un number";
-    }
-
-    if (!isFull(lista)) {
-        lista[index] = elemento;
-    } else {
-        throw "La lista esta llena.. ";
-    }
-
-    if (index > NUMMAXELEMENTOS) {
-        throw "index fuera de los limites de la lista";
-    }
-
-    return lista.length;
-
-}
 
 
 /**
@@ -166,34 +138,6 @@ function indexOf(lista, elemento) {
 
     } else {
         for (var i = 0; i < lista.length; i++) {
-
-            if (lista[i] === elemento)
-                index = i;
-            else
-                index = -1;
-        }
-    }
-    return index;
-}
-
-/**
- * 
- * Devuelve la posicion del elemento indicado comenzando por el final. Si no está
- * en la lista devuelve -1. 
- * 
- * @param {type} lista
- * @param {type} elemento
- * @returns {Number}
- */
-
-function lastIndexOf(lista, elemento) {
-    var index;
-
-    if (isNaN(elemento)) {
-        throw "El elemento no es un number";
-
-    } else {
-        for (var i = lista.length + 1; i >= 0; i--) {
 
             if (lista[i] === elemento)
                 index = i;
