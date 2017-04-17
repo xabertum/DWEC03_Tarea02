@@ -255,25 +255,4 @@ function removeElement(lista, elemento) {
     return bol;
 }
 
-/**
- * Reemplaza el elemento de la lista indicado por el indice. Devuelve el elemento
- * que estaba anteriormente en la lista. 
- * 
- * @param {type} lista
- * @param {type} index
- * @param {type} elemento
- * @returns {set.lista}
- */
-function set(lista, index, elemento) {
 
-    if (isNaN(elemento)) {
-        throw "El elemento no es un number";
-    } else if (index > NUMMAXELEMENTOS) {
-        throw "El index est fuera de los limites de la lista";
-    } else {
-
-        var aux = lista[index];
-        lista[index] = elemento;
-    }
-    return aux;
-}
