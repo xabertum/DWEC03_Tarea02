@@ -67,6 +67,32 @@ function size(lista) {
 
 /**
  * 
+ * @param {type} arr
+ * @param {type} elemento
+ * @returns {unresolved}
+ */
+
+function insertionSort(arr, elemento) {
+    var i, len = arr.length, el, j;
+
+    for (i = 1; i < len; i++) {
+        elemento = arr[i];
+        j = i;
+
+        while (j > 0 && arr[j - 1]) {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+
+        arr[j] = elemento;
+    }
+
+    return arr;
+}
+
+
+/**
+ * 
  * Añade un nuevo elemento al final de la lista. Devuelve el tamaño de la lista
  * una vez añadido. 
  * 
@@ -83,7 +109,7 @@ function add(lista, elemento) {
     }
 
     if (!isFull(lista)) {
-        lista[lista.length] = elemento;
+        insertionSort(lista, elemento);
     } else {
         throw "La lista está llena..";
     }
