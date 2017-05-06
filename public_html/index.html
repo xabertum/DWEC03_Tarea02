@@ -30,22 +30,22 @@
         <p id="set"></p>
         
         
-        <script src = "funciones_listas.js"></script>
+        <script src = "funciones_lista_ordenada.js"></script>
         <script>
             var miLista = create(4);
             document.getElementById("demo").innerHTML = "resultado de isEmpty (): " + isEmpty(miLista);
             document.getElementById("isFull").innerHTML = "resultado de isFull (): " + isFull(miLista);
             document.getElementById("size").innerHTML = "resultado de size (): " + size(miLista);
             document.getElementById("add").innerHTML = "add() - elemento anadido: " + add(miLista,4);
-            document.getElementById("add").innerHTML = "size() - despues de anadir elemento: " + size(miLista);
+            document.getElementById("size").innerHTML = "size() - despues de anadir elemento: " + size(miLista);
             
-            document.getElementById("addAt").innerHTML = "addAt - añadir elemento 25 en la posicion 0."; 
-            addAt(miLista,25,0);
+            //document.getElementById("addAt").innerHTML = "addAt - añadir elemento 25 en la posicion 0."; 
+            //addAt(miLista,25,0);
             
             document.getElementById("get").innerHTML = "get() - la posisicon 0, resultado de get(): " + get(miLista,0);
             document.getElementById("toString").innerHTML = "Funcion toString: " +  toString(miLista);
             document.getElementById("indexOf").innerHTML = "Index del elemento 0: " + indexOf(miLista,0);
-            document.getElementById("lastIndex").innerHTML = "Index del elemento 45: " + lastIndexOf(miLista,45);
+            //document.getElementById("lastIndex").innerHTML = "Index del elemento 45: " + lastIndexOf(miLista,45);
                        
             document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
             document.getElementById("clear").innerHTML = "Se borra la lista.";
@@ -65,6 +65,7 @@
             remove(miLista,1);
             document.getElementById("toStringAfterRemove").innerHTML = "Lista actualizada: " + toString(miLista);
             
+            document.getElementById("removeElement").innerHTML= "Se elimina el elemento 0: "
             removeElement(miLista,0);
             document.getElementById("afterRemoveElement").innerHTML = "Lista sin el elemento borrado: " + toString(miLista);
             
