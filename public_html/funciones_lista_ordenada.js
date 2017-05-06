@@ -109,27 +109,25 @@ function add(lista, elemento) {
     }
 
     if (!isFull(lista)) {
-        
+
         for (var i = 0; i < lista.length; i++) {
-            
+
             elemento = lista[i];
             j = i;
-            
+
             while (j > 0 && lista[j - 1]) {
-            lista[j] = lista[j - 1];
-            j--;
+                lista[j] = lista[j - 1];
+                j--;
+            }
+
+            lista[j] = elemento;
+
         }
 
-        lista[j] = elemento;
-            
-        }
-        
-        
-        
     } else {
         throw "La lista está llena..";
     }
-    return lista.length;
+    return lista;
 
 }
 
