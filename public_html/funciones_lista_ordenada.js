@@ -65,28 +65,23 @@ function size(lista) {
 
 }
 
+
 /**
  * 
  * @param {type} arr
- * @param {type} elemento
  * @returns {unresolved}
  */
-
-function insertionSort(arr, elemento) {
-    var i, len = arr.length, el, j;
-
-    for (i = 1; i < len; i++) {
-        elemento = arr[i];
-        j = i;
-
-        while (j > 0 && arr[j - 1]) {
-            arr[j] = arr[j - 1];
-            j--;
+function bubbleSort(arr) {
+    var len = arr.length;
+    for (var i = len - 1; i >= 0; i--) {
+        for (var j = 1; j <= i; j++) {
+            if (arr[j - 1] > arr[j]) {
+                var temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+            }
         }
-
-        arr[j] = elemento;
     }
-
     return arr;
 }
 
@@ -110,19 +105,8 @@ function add(lista, elemento) {
 
     if (!isFull(lista)) {
 
-        for (var i = 0; i < lista.length; i++) {
-
-            elemento = lista[i];
-            j = i;
-
-            while (j > 0 && lista[j - 1]) {
-                lista[j] = lista[j - 1];
-                j--;
-            }
-
-            lista[j] = elemento;
-
-        }
+        lista [lista.length] = elemento;
+        bubbleSort(lista, elemento);
 
     } else {
         throw "La lista está llena..";
